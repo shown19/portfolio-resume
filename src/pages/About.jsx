@@ -56,7 +56,7 @@ const About = (props, ref) => {
                         variants={props.childVariant}
                         href="./cv/cv.docx"
                         download="cv.docx"
-                        className="block bg-green-400 p-2 rounded-lg mt-5 w-96 text-center mx-auto lg:inline-block">
+                        className="block bg-green-400 p-2 rounded-lg mt-5 w-4/5 text-center mx-auto lg:w-2/4 lg:inline-block">
                             Download CV <i><FaDownload className="inline" /></i>
                     </motion.a>
                 </div>
