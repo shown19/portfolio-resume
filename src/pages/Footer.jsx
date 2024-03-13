@@ -17,7 +17,7 @@ const Footer = (props, ref) => {
                 variants={props.childVariant}
                 className="text-center text-lg w-full self-center py-2"
             >
-                All right reserved Dindo Jimenez @ { getYear() }
+                All right reserved Cion @ { getYear() }
             </motion.p>
         </motion.footer>
     )
