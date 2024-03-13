@@ -24,11 +24,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        env:
-          VITE_SENDEMAIL_SERVICE_ID: ${{secrets.VITE_SENDEMAIL_SERVICE_ID}}
-          VITE_SENDEMAIL_TEMPLATE_ID: ${{secrets.VITE_SENDEMAIL_TEMPLATE_ID}}
-          VITE_SENDEMAIL_PUBLIC_KEY: ${{secrets.VITE_SENDEMAIL_PUBLIC_KEY}}
-
+        
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
