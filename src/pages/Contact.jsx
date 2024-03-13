@@ -12,14 +12,15 @@ const Contact = (props, ref) => {
 
     const [sendStatus, setSendStatus] = useState(false);
     const [sendStatusMessage, setSendStatusMessage] = useState("")
-    console.log(import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY);
+
     const sendEmail = () => {
         
+        //temporary fix since import.meta.env is not working in github pages
         emailjs.sendForm(
-            import.meta.env.VITE_SENDEMAIL_SERVICE_ID,
-            import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID,
+            import.meta.env.VITE_SENDEMAIL_SERVICE_ID != undefined ? import.meta.env.VITE_SENDEMAIL_SERVICE_ID : "service_v2ymgkl",
+            import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID != undefined ? import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID : "template_t1vhf47",
             form.current,
-            import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY)
+            import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY) != undefined ? import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY : "uWPCLHbmOFdemyncZ"
             .then((result) => {
                 setSendStatus(true);
                 setSendStatusMessage("Message sent successfully");
