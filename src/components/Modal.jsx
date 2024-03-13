@@ -18,7 +18,7 @@ const Modal = (props) => {
                     <div className="flex flex-wrap text-center overflow-auto">
                         <div className="w-full text-3xl font-semibold">{props.portfData.title}</div>
                         <div className="w-full p-5">
-                            <img loading="lazy" className="mx-auto" src={`/portfolio-${props.categoryName}/portfolio-${props.categoryName}-img${props.index}.jpg`}></img> 
+                            <img loading="lazy" className="mx-auto" src={`./portfolio-${props.categoryName}/portfolio-${props.categoryName}-img${props.index}.jpg`}></img> 
                         </div>
                     </div>
             </div>

@@ -48,7 +48,7 @@ const Portfolio = (props, ref) => {
         }, 1000);
 
         try {
-            const response = await fetch(`./src/data/${category}.json`);
+            const response = await fetch(`././src/data/${category}.json`);
             const data = await response.json();
             setPortfData(data);
             setLoading(false);
