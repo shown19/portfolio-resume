@@ -1,6 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./css/main.css";
 import { Navbar } from "./components/Navbar";
 import Home from "./pages/Home";
@@ -28,14 +26,7 @@ function App() {
 
   useEffect(() => {
     let sections = document.querySelectorAll("section");
-    let windowSize = window.innerWidth;
-    // window.onresize = () => {
-    //   console.log(windowSize);
-    //   windowSize = window.innerWidth;
-    // }
-    // console.log(windowSize);
-    let navOption = windowSize < 768 ? false : true;
-    let navLinks = navOption === false ? document.querySelectorAll("#mainNav a") : document.querySelectorAll("#menu a");
+    
     window.onscroll = () => {
       sections.forEach( sec => {
         let top = window.scrollY;

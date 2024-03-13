@@ -31,7 +31,6 @@ const Contact = (props, ref) => {
             });
     };
 
-    //const email_regx= `^(([^<>()\[\]\\.,;:\s@"]+(.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/`;
     let name_regx = `[a-zA-Z]+`;
     const validationSchema = Yup.object({
         firstName: Yup.string().required("must not be empty").matches(name_regx, "alphabets only"),

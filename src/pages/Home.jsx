@@ -42,7 +42,7 @@ const Home = (props, ref) => {
                         variants={props.childVariant}
                     >
                         <i><FaMobileScreen className="inline" /></i>
-                        <span className="pl-4">+63 918 648 6094</span>
+                        <span className="pl-4">+** *** *** ****</span>
                     </motion.li>
                     <motion.li
                         variants={props.childVariant}
