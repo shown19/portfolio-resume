@@ -119,7 +119,7 @@ function App() {
   return (
     <>
         <video autoPlay muted loop id="bg-video">
-        <source src="/src/assets/bg-video.mp4" type="video/mp4"/>
+        <source src="/bg-video.mp4" type="video/mp4"/>
         </video>
       <Navbar
         ref={homeRef}
