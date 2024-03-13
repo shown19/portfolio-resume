@@ -16,7 +16,7 @@ const About = (props, ref) => {
                 <div className="self-center w-5/12 block">
                     <motion.img
                         variants={props.childVariant}
-                        src="/about-img.png"
+                        src="./about-img.png"
                         loading="lazy" alt="About Image"
                         className="w-full"
                     />
@@ -54,7 +54,7 @@ const About = (props, ref) => {
                     </ul>
                     <motion.a 
                         variants={props.childVariant}
-                        href="/cv/cv.docx"
+                        href="./cv/cv.docx"
                         download="cv.docx"
                         className="block bg-green-400 p-2 rounded-lg mt-5 w-96 text-center mx-auto lg:inline-block">
                             Download CV <i><FaDownload className="inline" /></i>

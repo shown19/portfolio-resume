@@ -48,7 +48,7 @@ const Portfolio = (props, ref) => {
         }, 1000);
 
         try {
-            const response = await fetch(`/src/data/${category}.json`);
+            const response = await fetch(`./src/data/${category}.json`);
             const data = await response.json();
             setPortfData(data);
             setLoading(false);
@@ -125,7 +125,7 @@ const Portfolio = (props, ref) => {
                         return (
                             <div key={key} className="flex flex-col mx-auto w-2/3 lg:w-1/3">
                                 <figure className="relative">
-                                    <img src={`/portfolio-${categoryName}/portfolio-${categoryName}-img${value.id}.jpg`} alt="" loading="lazy" className="rounded-xl object-cover object-top w-full h-52 brightness-75"/>
+                                    <img src={`./portfolio-${categoryName}/portfolio-${categoryName}-img${value.id}.jpg`} alt="" loading="lazy" className="rounded-xl object-cover object-top w-full h-52 brightness-75"/>
                                     <figcaption className="absolute w-full top-0 bottom-0 rounded-xl hover:bg-green-400 hover:bg-opacity-70">
                                         <i className="absolute top-1/4 mt-5 left-0 right-0 w-full text-2xl"><FaMagnifyingGlass className="mx-auto"/></i>
                                         <h5 className="absolute top-1/4 mt-14 text-center w-full bg-black/75 p-2">{value.title}</h5> 
