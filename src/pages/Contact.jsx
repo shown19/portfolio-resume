@@ -16,10 +16,10 @@ const Contact = (props, ref) => {
     const sendEmail = () => {
 
         emailjs.sendForm(
-            service_v2ymgkl,
-            template_t1vhf47,
+            "service_v2ymgkl",
+            "template_t1vhf47",
             form.current,
-            uWPCLHbmOFdemyncZ)
+            "uWPCLHbmOFdemyncZ")
             .then((result) => {
                 setSendStatus(true);
                 setSendStatusMessage("Message sent successfully");
