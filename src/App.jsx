@@ -42,7 +42,6 @@ function App() {
         } else {
           desktopNav.classList.remove("active");
           mobileNav.classList.remove("active");
-          console.log(id);
         }
       });
     }

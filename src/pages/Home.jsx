@@ -67,7 +67,7 @@ const Home = (props, ref) => {
             <div className="self-center">
                 <motion.img
                     variants={props.childVariant}
-                    src="/src/assets/profile.png" alt="profile-pic" className="mx-auto w-9/12 lg:w-full border-gray-300 border-20" loading="lazy"
+                    src="/profile.png" alt="profile-pic" className="mx-auto w-9/12 lg:w-full border-gray-300 border-20" loading="lazy"
                 />
             </div>
         </motion.section>
