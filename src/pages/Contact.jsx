@@ -12,9 +12,9 @@ const Contact = (props, ref) => {
 
     const [sendStatus, setSendStatus] = useState(false);
     const [sendStatusMessage, setSendStatusMessage] = useState("")
-
+    console.log(import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY);
     const sendEmail = () => {
-
+        
         emailjs.sendForm(
             import.meta.env.VITE_SENDEMAIL_SERVICE_ID,
             import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID,
