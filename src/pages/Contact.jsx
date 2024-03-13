@@ -16,11 +16,15 @@ const Contact = (props, ref) => {
     const sendEmail = () => {
         
         //temporary fix since import.meta.env is not working in github pages
+        const serviceID = import.meta.env.VITE_SENDEMAIL_SERVICE_ID !== undefined ? import.meta.env.VITE_SENDEMAIL_SERVICE_ID : "service_v2ymgkl";
+        const templateID = import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID !== undefined ? import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID : "template_t1vhf47";
+        const publicKey = import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY !== undefined ? import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY : "uWPCLHbmOFdemyncZ";
+        console.log( serviceID + " " + templateID + " " + publicKey);
         emailjs.sendForm(
-            import.meta.env.VITE_SENDEMAIL_SERVICE_ID != undefined ? import.meta.env.VITE_SENDEMAIL_SERVICE_ID : "service_v2ymgkl",
-            import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID != undefined ? import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID : "template_t1vhf47",
+            serviceID,
+            templateID,
             form.current,
-            import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY) != undefined ? import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY : "uWPCLHbmOFdemyncZ"
+            publicKey
             .then((result) => {
                 setSendStatus(true);
                 setSendStatusMessage("Message sent successfully");
@@ -29,7 +33,7 @@ const Contact = (props, ref) => {
                 setSendStatus(false);
                 setSendStatusMessage("Failed to send message");
                 console.log(error.text);
-            });
+            }));
     };
 
     let name_regx = `[a-zA-Z]+`;
