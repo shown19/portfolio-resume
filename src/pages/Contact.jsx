@@ -16,10 +16,10 @@ const Contact = (props, ref) => {
     const sendEmail = () => {
 
         emailjs.sendForm(
-            process.env.VITE_SENDEMAIL_SERVICE_ID,
-            process.env.VITE_SENDEMAIL_TEMPLATE_ID,
+            import.meta.env.VITE_SENDEMAIL_SERVICE_ID,
+            import.meta.env.VITE_SENDEMAIL_TEMPLATE_ID,
             form.current,
-            process.env.VITE_SENDEMAIL_PUBLIC_KEY)
+            import.meta.env.VITE_SENDEMAIL_PUBLIC_KEY)
             .then((result) => {
                 setSendStatus(true);
                 setSendStatusMessage("Message sent successfully");

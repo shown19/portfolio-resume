@@ -7,6 +7,8 @@ export default defineConfig({
   base: "/portfolio-resume/",
   define: {
     "process.env": process.env,
-    ENV_KEY: process.env.ENV_KEY,
+    VITE_SENDEMAIL_SERVICE_ID: process.env.VITE_SENDEMAIL_SERVICE_ID,
+    VITE_SENDEMAIL_TEMPLATE_ID: process.env.VITE_SENDEMAIL_TEMPLATE_ID,
+    VITE_SENDEMAIL_PUBLIC_KEY: process.env.VITE_SENDEMAIL_PUBLIC_KEY
   },
 })
