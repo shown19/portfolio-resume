@@ -16,7 +16,7 @@ const Modal = (props) => {
             <div className="modal-inner popup-animate flex flex-col bg-zinc-900 w-3/4 max-w-7xl">
                 <button onClick={(e) => {props.modalToggle(false)}} className="self-end mt-3 mr-3 mb-5"><FaXmark className="text-3xl text-zinc-400 hover:text-zinc-100"/></button>
                     <div className="flex flex-wrap text-center overflow-auto">
-                        <div className="w-full text-3xl font-semibold">{props.portfData.title}</div>
+                        <div className="w-full text-3xl font-semibold">{props.portfTitle}</div>
                         <div className="w-full p-5">
                             <img loading="lazy" className="mx-auto" src={`./portfolio-${props.categoryName}/portfolio-${props.categoryName}-img${props.index}.jpg`}></img> 
                         </div>

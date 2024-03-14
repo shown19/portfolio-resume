@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 const Portfolio = (props, ref) => {
     const [modal, setModal] = useState(false);
     const [modalIndex, setModalIndex] = useState();
+    const [portfTitle, setPortfTitle] = useState();
     const [categoryName, setCategoryName] = useState("web");
     const [activeNavItem, setActiveNavItem] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -16,10 +17,11 @@ const Portfolio = (props, ref) => {
         display: "block",
         margin: "0 auto"
     }
-    const modalHandler = (e, id) => {
+    const modalHandler = (e, id, title) => {
         e.preventDefault();
         setModal(!modal);
         setModalIndex(id);
+        setPortfTitle(title);
     } 
 
     const [portfData, setPortfData] = useState([]);
@@ -112,7 +114,7 @@ const Portfolio = (props, ref) => {
                 className="mt-5"
             >
                 <ul className="category flex justify-center gap-6 flex-wrap">
-                    <li id="navItem0" onClick={() => handleCategory("web", 0)} className={`${0 === activeNavItem ? 'active' : ''} cursor-pointer hover:border-b-2`}>Web Development</li>
+                    <li id="navItem0" onClick={() => handleCategory("web", 0)} className={`${0 === activeNavItem ? 'active' : ''} cursor-pointer hover:border-b-2`}>Websites</li>
                     <li id="navItem1" onClick={() => handleCategory("email", 1)} className={`${1 === activeNavItem ? 'active' : ''} cursor-pointer hover:border-b-2`}>Email Creatives</li>
                     <li id="navItem2" onClick={() => handleCategory("insertc", 2)} className={`${2 === activeNavItem ? 'active' : ''} cursor-pointer hover:border-b-2`}>Insert Cards</li>
                     <li id="navItem3" onClick={() => handleCategory("infog", 3)} className={`${3 === activeNavItem ? 'active' : ''} cursor-pointer hover:border-b-2`}>Infographics Design</li>
@@ -129,7 +131,7 @@ const Portfolio = (props, ref) => {
                                     <figcaption className="absolute w-full top-0 bottom-0 rounded-xl hover:bg-green-400 hover:bg-opacity-70">
                                         <i className="absolute top-1/4 mt-5 left-0 right-0 w-full text-2xl"><FaMagnifyingGlass className="mx-auto"/></i>
                                         <h5 className="absolute top-1/4 mt-14 text-center w-full bg-black/75 p-2">{value.title}</h5> 
-                                        <a href="#" onClick={(e) => {modalHandler(e, value.id)}}  className="absolute top-0 bottom-0 w-full"></a>                   
+                                        <a href="#" onClick={(e) => {modalHandler(e, value.id, value.title)}}  className="absolute top-0 bottom-0 w-full"></a>                   
                                     </figcaption>
                                 </figure>
                             </div>
@@ -153,7 +155,7 @@ const Portfolio = (props, ref) => {
                     modalToggle={setModal}
                     modalState={modal}
                     index={modalIndex}
-                    portfData={portfData[modalIndex]} 
+                    portfTitle={portfTitle} 
                     categoryName={categoryName}
                 />
             </div>
