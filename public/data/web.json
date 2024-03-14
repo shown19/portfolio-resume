@@ -1,32 +1,29 @@
 [
     {
         "id": 0,
-        "title" : "Vital Strong Plus"
+        "title" : "Books N' Media"
     },
     {
         "id": 1,
-        "title" : "Extra White"
+        "title" : "THE BOOKREADS"
+    },
+    {
+        "id": 12,
+        "title" : "SupremeX"
+    },
+    {
+        "id": 15,
+        "title" : "Smart Retailing"
+    },
+    {
+        "id": 13,
+        "title" : "SupremeX"
     },
     {
         "id": 2,
         "title" : "Xtra Luminous Skin"
     },
-    {
-        "id": 3,
-        "title" : "SupremeX"
-    },
-    {
-        "id": 4,
-        "title" : "Tressurge"
-    },
-    {
-        "id": 5,
-        "title" : "OReilly Media"
-    },
-    {
-        "id": 6,
-        "title" : "Memory Gain+"
-    },
+    
     {
         "id": 7,
         "title" : "Tressurge"
@@ -48,20 +45,8 @@
         "title" : "Synergy Max"
     },
     {
-        "id": 12,
-        "title" : "SupremeX"
-    },
-    {
-        "id": 13,
-        "title" : "SupremeX"
-    },
-    {
         "id": 14,
         "title" : "Staminon"
-    },
-    {
-        "id": 15,
-        "title" : "Smart Retailing"
     },
     {
         "id": 16,
@@ -98,5 +83,29 @@
     {
         "id": 24,
         "title" : "Smart Retailing"
+    },
+    {
+        "id": 25,
+        "title" : "Vital Strong Plus"
+    },
+    {
+        "id": 26,
+        "title" : "Extra White"
+    },
+    {
+        "id": 3,
+        "title" : "SupremeX"
+    },
+    {
+        "id": 4,
+        "title" : "Tressurge"
+    },
+    {
+        "id": 5,
+        "title" : "OReilly Media"
+    },
+    {
+        "id": 6,
+        "title" : "Memory Gain+"
     }
 ]

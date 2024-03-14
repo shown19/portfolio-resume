@@ -77,16 +77,16 @@ const Portfolio = (props, ref) => {
     // (This could be items from props; or items loaded in a local state
     // from an API endpoint with useEffect and useState)
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = portfData.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(portfData.length / itemsPerPage);
     
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % portfData.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
+        // console.log(
+        // `User requested page number ${event.selected}, which is offset ${newOffset}`
+        // );
         setItemOffset(newOffset);
         setCurrentPage(event.selected);
 

@@ -46,7 +46,7 @@ const Experiences = ( props, ref ) => {
             <div className="flex flex-col lg:w-2/4">
                 <motion.h2 
                     variants={props.childVariant}
-                    className="font-bold text-3xl mb-10 text-center"
+                    className="font-bold text-3xl mb-10 text-center mt-10 lg:mt-0"
                 >
                     Work Experience
                 </motion.h2>
